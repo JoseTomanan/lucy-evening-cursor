@@ -1,10 +1,10 @@
 export default {
-  background1: '#0e0f15',
-  background2: '#14161e',
-  background3: '#1a1d27',
-  background3Half: '#1F222D',
-  background4: '#292c38',
-  background4Light: '#2e3140',
+  background1: '#07080b',
+  background2: '#0a0b0f',
+  background3: '#0d0e14',
+  background3Half: '#0f1117',
+  background4: '#15161c',
+  background4Light: '#171920',
   selection: '#413b4f',
   dim1: '#494c59',
   dim2: '#5e6173',
@@ -18,7 +18,7 @@ export default {
   call: '#76c5a4',
   base1: '#fb7da7',
   base2: '#e3cf65',
-  translucent: '#161821bf',
+  translucent: '#0b0c11bf',
   translucent2: '#ffffff26',
   translucent3: '#ffffff0c',
   translucent4: '#76c5a40c',
@@ -43,7 +43,7 @@ export default {
   diagHint: '#af98e680',          // const @ 50%
 
   // Status bar: background at 85% alpha
-  statusBg: '#14161ed9',          // background2 @ 85%
+  statusBg: '#0a0b0fd9',          // background2 @ 85%
   statusWarning: '#fdad5d40',     // accent2 @ 25%
   statusError: '#fb7da74d',       // base1 @ 30%
 
@@ -69,6 +69,6 @@ export default {
   findMatchHighlight: '#e3cf6533',// base2 @ 20%
 
   // Editor widget backgrounds: main bg slightly lighter
-  widgetBg: '#222530',
-  widgetBorder: '#2a2d39',
+  widgetBg: '#111218',
+  widgetBorder: '#15161d',
 }
