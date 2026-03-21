@@ -1,10 +1,10 @@
 {
-	"name": "oh-lucy-vscode",
-	"displayName": "oh lucy",
-	"description": "a re-upload of a soft but clear syntax theme",
-	"version": "0.0.3",
-	"publisher": "Hermitter",
-	"repository": "https://github.com/hermitter/oh-lucy-vscode-theme",
+	"name": "lucy-evening-cursor",
+	"displayName": "Lucy Evening Cursor",
+	"description": "A soft, warm dark theme based on the lucy-evening palette, styled for Cursor",
+	"version": "0.1.0",
+	"publisher": "jdtomanan",
+	"repository": "https://github.com/jdtomanan/lucy-evening-cursor",
 	"scripts": {
 		"build": "node --experimental-modules src/index.mjs",
 		"release": "npm run build && git add dist && git commit -m build-theme && npm version patch & vsce publish && git push"
@@ -19,29 +19,19 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "oh-lucy",
+				"label": "Lucy Evening Cursor",
 				"uiTheme": "vs-dark",
-				"path": "./dist/oh-lucy.json"
-			},
-			{
-				"label": "lucy",
-				"uiTheme": "vs-dark",
-				"path": "./dist/lucy.json"
-			},
-			{
-				"label": "lucy-evening",
-				"uiTheme": "vs-dark",
-				"path": "./dist/lucy-evening.json"
+				"path": "./dist/lucy-evening-cursor.json"
 			}
 		]
 	},
 	"tags": [
 		"soft",
 		"clear",
-		"pink",
 		"dark theme",
 		"color-theme",
-		"monokai"
+		"cursor",
+		"evening"
 	],
 	"dependencies": {
 		"chroma-js": "^2.1.0"
@@ -49,11 +39,5 @@
 	"devDependencies": {
 		"@vscode/vsce": "^3.1.0",
 		"ovsx": "^0.8.1"
-	},
-	"__metadata": {
-		"id": "a97a83b4-05ec-49fe-9265-073a91bb4c49",
-		"publisherDisplayName": "Hermitter",
-		"publisherId": "51e84d48-eab9-455e-8db7-294bb7401b0c",
-		"isPreReleaseVersion": false
 	}
 }

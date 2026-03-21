@@ -1,12 +1,8 @@
 import { writeFile } from 'fs'
 import { promisify } from 'util'
 import chroma from 'chroma-js'
-// Original Lucy
-import og_theme from './lucy/theme.mjs'
-import og_colors from './lucy/colors.mjs'
-// Oh Lucy
-import theme from './oh-lucy/theme.mjs'
-import colors from './oh-lucy/colors.mjs'
+import theme from './lucy/theme.mjs'
+import colors from './lucy/colors.mjs'
 
 const promisifiedWriteFile = promisify(writeFile);
 
@@ -25,49 +21,22 @@ const calculate_evening_theme = (color) => {
   return chroma({ r: newRed, g: newGreen, b: newBlue, a: alpha }).hex();
 }
 
-const VARIANTS = {
-  // Original Lucy themes
-  'lucy': {
-    theme: og_theme,
-    colors: og_colors,
-    getColor: (color) => color,
-  },
-  'lucy-evening': {
-    theme: og_theme,
-    colors: og_colors,
-    getColor: (color) => calculate_evening_theme(color),
-  },
-  // Oh Lucy themes
-  'oh-lucy': {
-    theme: theme,
-    colors: colors,
-    getColor: (color) => color,
-  },
-};
-
-const buildTheme = async (variants) => {
+const buildTheme = async () => {
   try {
-    await Promise.all(
-      // For each theme variant
-      Object.entries(variants).map(([variantName, variant]) => {
-        // Assemble the theme's JSON
-        const themeWithColors = variant.theme({
-          'name': variantName,
-          'colors': Object.entries(variant.colors).reduce(
-            (acc, [colorName, colorValue]) => ({
-              ...acc,
-              [colorName]: variant.getColor(colorValue)
-            }),
-            {}
-          )
-        });
+    const themeWithColors = theme({
+      'name': 'Lucy Evening Cursor',
+      'colors': Object.entries(colors).reduce(
+        (acc, [colorName, colorValue]) => ({
+          ...acc,
+          [colorName]: calculate_evening_theme(colorValue)
+        }),
+        {}
+      )
+    });
 
-        // Export it to a file
-        return promisifiedWriteFile(
-          `./dist/${variantName}.json`,
-          JSON.stringify(themeWithColors)
-        );
-      })
+    await promisifiedWriteFile(
+      './dist/lucy-evening-cursor.json',
+      JSON.stringify(themeWithColors, null, 2)
     );
     console.log('🌺 Theme built. 💅');
   } catch (error) {
@@ -75,4 +44,4 @@ const buildTheme = async (variants) => {
   }
 };
 
-buildTheme(VARIANTS)
+buildTheme()
