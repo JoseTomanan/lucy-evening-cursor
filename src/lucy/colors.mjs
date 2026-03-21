@@ -30,9 +30,9 @@ export default {
 
   // Cursor-style alpha variants
   // Git decorations: accent colors at 40-55% alpha
-  gitModified: '#76c5a48c',       // call @ 55%
+  gitModified: '#fdad5d8c',       // accent2 @ 55%
   gitDeleted: '#fb7da78c',        // base1 @ 55%
-  gitUntracked: '#fdad5d73',      // accent2 @ 45%
+  gitUntracked: '#76c5a473',      // call @ 45%
   gitIgnored: '#494c5966',        // dim1 @ 40%
   gitConflicting: '#fdad5d73',    // accent2 @ 45%
 
