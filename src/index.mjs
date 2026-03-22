@@ -1,7 +1,7 @@
 import { writeFile } from 'fs'
 import { promisify } from 'util'
-import theme from './lucy/theme.mjs'
-import colors from './lucy/colors.mjs'
+import theme from './evening-lucy/theme.mjs'
+import colors from './evening-lucy/colors.mjs'
 
 const promisifiedWriteFile = promisify(writeFile);
 
