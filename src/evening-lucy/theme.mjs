@@ -40,19 +40,19 @@ export default ({ name, colors }) => ({
     'badge.foreground': colors.background3,
     'badge.background': colors.base2,
     'progressBar.background': colors.background4,
-    'list.activeSelectionBackground': colors.background3,
-    'list.activeSelectionForeground': colors.base2,
+    'list.activeSelectionBackground': colors.translucent2,
+    'list.activeSelectionForeground': colors.pure1,
     'list.errorForeground': colors.base1,
     'list.warningForeground': colors.accent2,
     'list.dropBackground': colors.translucent,
-    'list.focusBackground': colors.background3,
+    'list.focusBackground': colors.translucent2,
     'list.focusForeground': colors.pure2,
     'list.highlightForeground': colors.pure2,
-    'list.hoverBackground': colors.background2,
+    'list.hoverBackground': colors.translucent9,
     'list.hoverForeground': colors.pure2,
-    'list.inactiveSelectionBackground': colors.background3,
-    'list.inactiveSelectionForeground': colors.base2,
-    'list.inactiveFocusBackground': colors.background3,
+    'list.inactiveSelectionBackground': colors.translucent9,
+    'list.inactiveSelectionForeground': colors.pure1,
+    'list.inactiveFocusBackground': colors.translucent9,
     'list.invalidItemForeground': colors.base1,
     'activityBar.background': colors.background1,
     'activityBar.dropBackground': colors.translucent,
@@ -130,7 +130,7 @@ export default ({ name, colors }) => ({
     'editorHint.border': colors.translucent8,
     'editorGutter.background': colors.background3,
     'editorGutter.modifiedBackground': colors.accent2,
-    'editorGutter.addedBackground': colors.call,
+    'editorGutter.addedBackground': colors.added,
     'editorGutter.deletedBackground': colors.base1,
     'diffEditor.insertedTextBackground': colors.translucent4,
     'diffEditor.insertedTextBorder': colors.translucent8,
@@ -180,7 +180,7 @@ export default ({ name, colors }) => ({
     'editorOverviewRuler.wordHighlightForeground': colors.translucent2,
     'editorOverviewRuler.wordHighlightStrongForeground': colors.translucent2,
     'editorOverviewRuler.modifiedForeground': colors.accent2,
-    'editorOverviewRuler.addedForeground': colors.call,
+    'editorOverviewRuler.addedForeground': colors.added,
     'editorOverviewRuler.deletedForeground': colors.base1,
     'editorOverviewRuler.errorForeground': colors.base1,
     'editorOverviewRuler.warningForeground': colors.accent2,
@@ -188,8 +188,8 @@ export default ({ name, colors }) => ({
     'panel.background': colors.background4,
     'panel.border': colors.background3,
     'panel.dropBackground': colors.translucent,
-    'panelTitle.activeBorder': colors.base2,
-    'panelTitle.activeForeground': colors.base2,
+    'panelTitle.activeBorder': colors.pure1,
+    'panelTitle.activeForeground': colors.pure1,
     'panelTitle.inactiveForeground': colors.dim3,
     'statusBar.background': colors.statusBg,
     'statusBar.foreground': colors.dim2,
@@ -231,13 +231,13 @@ export default ({ name, colors }) => ({
     'terminal.ansiBrightBlack': colors.dim2,
     'terminal.ansiBrightBlue': colors.accent2,
     'terminal.ansiBrightCyan': colors.accent1,
-    'terminal.ansiBrightGreen': colors.call,
+    'terminal.ansiBrightGreen': colors.added,
     'terminal.ansiBrightMagenta': colors.const,
     'terminal.ansiBrightRed': colors.base1,
     'terminal.ansiBrightWhite': colors.pure2,
     'terminal.ansiBrightYellow': colors.base2,
     'terminal.ansiCyan': colors.accent1,
-    'terminal.ansiGreen': colors.call,
+    'terminal.ansiGreen': colors.added,
     'terminal.ansiMagenta': colors.const,
     'terminal.ansiRed': colors.base1,
     'terminal.ansiWhite': colors.pure2,
@@ -260,7 +260,7 @@ export default ({ name, colors }) => ({
     'minimap.selectionHighlight': colors.minimapSelection,
     'minimap.errorHighlight': colors.minimapError,
     'minimap.warningHighlight': colors.minimapWarning,
-    'minimapGutter.addedBackground': colors.call,
+    'minimapGutter.addedBackground': colors.added,
     'minimapGutter.modifiedBackground': colors.accent2,
     'minimapGutter.deletedBackground': colors.base1,
 
@@ -448,7 +448,18 @@ export default ({ name, colors }) => ({
       scope: 'entity.name.function',
       settings: {
         fontStyle: 'bold',
-        foreground: colors.accent2
+        foreground: colors.call
+      }
+    },
+    {
+      scope: [
+        'entity.name.function.decorator.python',
+        'meta.function.decorator.python',
+        'meta.function.decorator.identifier.python',
+        'support.token.decorator.python'
+      ],
+      settings: {
+        fontStyle: ''
       }
     },
     {
@@ -492,7 +503,7 @@ export default ({ name, colors }) => ({
     {
       scope: ['entity.name.function', 'support.function'],
       settings: {
-        foreground: colors.accent2
+        foreground: colors.call
       }
     },
     {
@@ -510,13 +521,13 @@ export default ({ name, colors }) => ({
     {
       scope: 'keyword',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
       scope: 'keyword.control',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
@@ -607,7 +618,7 @@ export default ({ name, colors }) => ({
         'markup.inserted punctuation.definition.inserted'
       ],
       settings: {
-        foreground: colors.call
+        foreground: colors.added
       }
     },
     {
@@ -668,7 +679,7 @@ export default ({ name, colors }) => ({
         'meta.function-call.arguments meta.function-call'
       ],
       settings: {
-        foreground: colors.accent2
+        foreground: colors.call
       }
     },
     {
@@ -684,7 +695,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'meta.instance.constructor',
       settings: {
-        foreground: colors.accent2
+        foreground: colors.call
       }
     },
     {
@@ -979,7 +990,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'storage',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
@@ -991,19 +1002,19 @@ export default ({ name, colors }) => ({
     {
       scope: 'storage.type.extends',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
       scope: 'storage.type.function.arrow',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
       scope: 'storage.modifier',
       settings: {
-        foreground: colors.accent1
+        foreground: colors.base1
       }
     },
     {
@@ -1096,7 +1107,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'support.function',
       settings: {
-        foreground: colors.accent2
+        foreground: colors.call
       }
     },
     {
@@ -1201,7 +1212,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'variable.function',
       settings: {
-        foreground: colors.accent2
+        foreground: colors.call
       }
     },
     {
