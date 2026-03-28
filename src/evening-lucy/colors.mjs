@@ -1,24 +1,24 @@
 export default {
-  background1: '#0c0a0d',
-  background2: '#100f13',
-  background3: '#151418',
-  background3Half: '#19181d',
-  background4: '#211f23',
-  background4Light: '#252228',
+  background1: '#0c0c0c',
+  background2: '#111111',
+  background3: '#161616',
+  background3Half: '#1a1a1a',
+  background4: '#212121',
+  background4Light: '#252525',
   selection: '#493b47',
-  dim1: '#524b51',
+  dim1: '#666066',
   dim2: '#686069',
-  dim3: '#938884',
+  dim3: '#9e9794',
   dim4: '#ccb5ca',
-  pure1: '#e5dfd9',
-  pure2: '#ded7d0',
+  pure1: '#ece7e2',
+  pure2: '#e8e4de',
   const: '#b898dd',
   accent1: '#56c6d5',
   accent2: '#ffac5c',
   call: '#7ec49d',
   base1: '#ff7da3',
   base2: '#f0ce59',
-  translucent: '#111115bf',
+  translucent: '#111111bf',
   translucent2: '#ffffff26',
   translucent3: '#ffffff0d',
   translucent4: '#7ec49d0d',
@@ -42,7 +42,7 @@ export default {
   diagHint: '#b898dd80',
 
   // Status bar: background at 85% alpha
-  statusBg: '#100f13d9',
+  statusBg: '#111111d9',
   statusWarning: '#ffac5c40',
   statusError: '#ff7da34d',
 
@@ -61,13 +61,13 @@ export default {
   bracket6: '#f0ce5959',
 
   // Selection/highlight backgrounds: 20-25% alpha
-  selectionBg: '#493b4740',
+  selectionBg: '#493b4780',
   highlightBg: '#ffffff33',
   wordHighlight: '#ffffff3d',
   findMatch: '#f0ce5940',
   findMatchHighlight: '#f0ce5933',
 
   // Editor widget backgrounds: main bg slightly lighter
-  widgetBg: '#1c1a1e',
-  widgetBorder: '#211f24',
+  widgetBg: '#1c1c1c',
+  widgetBorder: '#212121',
 }

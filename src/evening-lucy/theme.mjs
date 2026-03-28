@@ -107,17 +107,19 @@ export default ({ name, colors }) => ({
     'editor.findRangeHighlightBackground': colors.translucent3,
     'editor.findRangeHighlightBorder': colors.translucent8,
     'editor.hoverHighlightBackground': colors.translucent3,
-    'editor.lineHighlightBackground': colors.translucent3,
+    'editor.lineHighlightBackground': colors.background4Light,
     'editor.lineHighlightBorder': colors.translucent8,
     'editorLink.activeForeground': colors.accent1,
     'editor.rangeHighlightBackground': colors.background4,
     'editor.rangeHighlightBorder': colors.background4,
     'editorWhitespace.foreground': colors.dim1,
-    'editorIndentGuide.background': colors.background4,
+    'editorIndentGuide.background': colors.translucent9,
+    'editorIndentGuide.background1': colors.translucent9,
+    'editorIndentGuide.activeBackground1': colors.translucent2,
     'editorRuler.foreground': colors.dim1,
     'editorCodeLens.foreground': colors.dim2,
-    'editorBracketMatch.background': colors.background3,
-    'editorBracketMatch.border': colors.dim2,
+    'editorBracketMatch.background': colors.translucent2,
+    'editorBracketMatch.border': colors.translucent8,
     'editorError.foreground': colors.diagError,
     'editorError.border': colors.translucent8,
     'editorWarning.foreground': colors.diagWarning,
@@ -138,9 +140,9 @@ export default ({ name, colors }) => ({
     'editorWidget.border': colors.widgetBorder,
     'editorSuggestWidget.background': colors.widgetBg,
     'editorSuggestWidget.border': colors.widgetBorder,
-    'editorSuggestWidget.foreground': colors.dim4,
+    'editorSuggestWidget.foreground': colors.pure2,
     'editorSuggestWidget.highlightForeground': colors.pure2,
-    'editorSuggestWidget.selectedBackground': colors.dim2,
+    'editorSuggestWidget.selectedBackground': colors.dim1,
     'editorHoverWidget.background': colors.widgetBg,
     'editorHoverWidget.border': colors.widgetBorder,
     'debugExceptionWidget.background': colors.background4,
@@ -446,7 +448,7 @@ export default ({ name, colors }) => ({
       scope: 'entity.name.function',
       settings: {
         fontStyle: 'bold',
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
@@ -490,7 +492,7 @@ export default ({ name, colors }) => ({
     {
       scope: ['entity.name.function', 'support.function'],
       settings: {
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
@@ -508,19 +510,37 @@ export default ({ name, colors }) => ({
     {
       scope: 'keyword',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
       scope: 'keyword.control',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
       scope: 'keyword.operator',
       settings: {
-        foreground: colors.base1
+        foreground: colors.pure2
+      }
+    },
+    {
+      scope: [
+        'keyword.operator.expression.instanceof',
+        'keyword.operator.expression.in',
+        'keyword.operator.expression.of',
+        'keyword.operator.expression.keyof',
+        'keyword.operator.expression.typeof',
+        'keyword.operator.expression.delete',
+        'keyword.operator.expression.void',
+        'keyword.operator.new',
+        'keyword.operator.ternary',
+        'keyword.operator.optional',
+        'keyword.operator.module'
+      ],
+      settings: {
+        foreground: colors.accent1
       }
     },
     {
@@ -648,7 +668,7 @@ export default ({ name, colors }) => ({
         'meta.function-call.arguments meta.function-call'
       ],
       settings: {
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
@@ -664,7 +684,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'meta.instance.constructor',
       settings: {
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
@@ -959,7 +979,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'storage',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
@@ -971,19 +991,19 @@ export default ({ name, colors }) => ({
     {
       scope: 'storage.type.extends',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
       scope: 'storage.type.function.arrow',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
       scope: 'storage.modifier',
       settings: {
-        foreground: colors.base1
+        foreground: colors.accent1
       }
     },
     {
@@ -1076,7 +1096,7 @@ export default ({ name, colors }) => ({
     {
       scope: 'support.function',
       settings: {
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
@@ -1156,15 +1176,32 @@ export default ({ name, colors }) => ({
       }
     },
     {
+      scope: 'variable.other.readwrite',
+      settings: {
+        foreground: colors.accent1
+      }
+    },
+    {
       scope: 'variable.other.member',
       settings: {
         foreground: colors.pure2
       }
     },
     {
+      scope: [
+        'variable.other.property',
+        'variable.other.property.ts',
+        'support.variable.property',
+        'meta.definition.property.ts'
+      ],
+      settings: {
+        foreground: colors.const
+      }
+    },
+    {
       scope: 'variable.function',
       settings: {
-        foreground: colors.call
+        foreground: colors.accent2
       }
     },
     {
